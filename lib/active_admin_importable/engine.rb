@@ -1,10 +1,8 @@
-require 'active_admin_importable'
-require 'rails'
+require "active_admin_importable"
+require "rails"
 
 module ActiveAdminImportable
   class Engine < Rails::Engine
-
-    config.mount_at = '/'
-
+    config.mount_at = "/"
   end
 end

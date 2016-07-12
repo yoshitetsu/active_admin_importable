@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/active_admin_importable/version', __FILE__)
+require File.expand_path("../lib/active_admin_importable/version", __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Kevin Horst"]
@@ -8,10 +8,11 @@ Gem::Specification.new do |gem|
   gem.summary       = "Add CSV import to Active Admin resources with one line."
   gem.homepage      = "http://github.com/krhorst/active_admin_importable"
 
-  gem.files         = `git ls-files`.split($\)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.files         = `git ls-files`.split($OUTPUT_RECORD_SEPARATOR)
+  gem.executables   = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "active_admin_importable"
   gem.require_paths = ["lib"]
   gem.version       = ActiveAdminImportable::VERSION
+  gem.add_development_dependency "onkcop"
 end
